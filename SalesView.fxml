@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.FXCollections?>
+<?import model.*?>
+
+
+ <GridPane alignment="CENTER" hgap="5.0" vgap="5.0" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.SalesController">  
+     <children>
+                <HBox alignment="TOP_RIGHT" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+            <children>
+                <Button fx:id="closeBtn" onAction="#closeForm" text="close"/>
+            </children>
+        </HBox>
+        <Label text=" Internet package sales registration" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        
+                <Label text=" Name and Surname" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="tfNameSurname" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                
+                <Label text=" Address" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <TextField fx:id="tfAddress" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        
+                <Label text=" Internet speed" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <ChoiceBox fx:id="cbSpeed" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+               
+        
+                <Label text=" Internet traffic" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                <ChoiceBox fx:id="cbInternetTraffic" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                
+        
+                <Label text=" Contract" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                <ChoiceBox fx:id="cbContract"  GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                
+               
+                <Button fx:id="sellBtn" onAction="#insertSell" text="Insert" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+           
+                <Button fx:id="delBtn" onAction="#deleteSell" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="9" />  
+          
+              <Pane GridPane.columnIndex="1" GridPane.rowIndex="10">
+            <TableView fx:id="tabela">
+                <columns>
+                    <TableColumn text="Name and Surname">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="nameSurname" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Address">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="address" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Internet speed">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="speed" />
+                        </cellValueFactory>                        
+                    </TableColumn>
+                    <TableColumn text="Internet traffic">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="internetTraffic" />
+                        </cellValueFactory>                        
+                    </TableColumn>
+                    <TableColumn text="Contract">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="contract" />
+                        </cellValueFactory>                        
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </Pane> 
+           
+     </children>
+ </GridPane>  
