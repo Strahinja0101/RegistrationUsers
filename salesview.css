@@ -1,0 +1,49 @@
+
+.root
+{
+    -fx-background-color: #3a6363;
+}
+.label
+{
+    -fx-text-fill: white;
+}
+.text-field
+{
+    -fx-background-color: transparent;
+    -fx-border-color: #FFFFFF;
+    -fx-text-fill: white;
+}
+
+.text-field:hover, .text-field:focused
+{
+    -fx-border-color: #75606F;
+}
+.choice-box{
+    -fx-background-color: transparent;
+    -fx-border-color: #FFFFFF;
+    -fx-text-fill: black;
+}
+    
+#closeBtn
+{
+   
+    -fx-background-color: transparent;
+    -fx-border-width:0.5;
+}
+
+#saveBtn
+{
+   
+    -fx-border-width:0.0;
+    -fx-background-color: transparent;
+}
+
+#clearBtn
+{
+    
+    -fx-border-width:0.0;
+    -fx-background-color: transparent;
+}
+
+
+
